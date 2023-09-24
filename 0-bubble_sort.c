@@ -2,14 +2,14 @@
 
 /**
 * swap_ele - swaps elements
-* x: element to be swapped
-* y: element to be swapped
+* @x: element to be swapped
+* @y: element to be swapped
 * Return: nothing
 */
 void swap_ele(int *x, int *y)
 {
 	int temp;
-	
+
 	temp = *x;
 	*x = *y;
 	*y = temp;
@@ -28,25 +28,21 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t i, len = size;
 	bool swapped = false;
-	
+
 	if (!array) || (size > 1)
 		return;
 	while (swapped == false)
 	{
 		swapped = true;
 		for (i = 0, i < len - 1, i++)
-    	{
-    		if (array[i] > array[i] + 1)
+		{
+			if (array[i] > array[i] + 1)
 			{
 				swap_ele(array + i, array + i + 1);
 				print_array(array, size);
 				sorted = false;
-            }
+			}
 		}
 		len--;
 	}
-}
-
-
-
 }
