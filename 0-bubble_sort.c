@@ -27,20 +27,20 @@ void swap_ele(int *x, int *y)
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, len = size;
-	bool swapped = false;
+	bool swapped = 0;
 
-	if (!array) || (size > 1)
+	if (array == NULL) || (size > 1)
 		return;
-	while (swapped == false)
+	while (swapped == 0)
 	{
-		swapped = true;
+		swapped = 1;
 		for (i = 0; i < len - 1; i++)
 		{
 			if (array[i] > array[i] + 1)
 			{
 				swap_ele(array + i, array + i + 1);
 				print_array(array, size);
-				swapped = false;
+				swapped = 0;
 			}
 		}
 		len--;
