@@ -3,9 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-#define TRUE = 1
-#define FALSE = 0
 
 /**
  * struct listint_s - Doubly linked list node
