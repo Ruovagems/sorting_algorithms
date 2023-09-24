@@ -27,14 +27,11 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void quick_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
-<<<<<<< HEAD
 void insertion_sort_list(listint_t **list);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right)
 void quick_sort(int *array, size_t size);
-=======
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
->>>>>>> 3414d28da05a4923506985ce3381af2e31520b32
 
 #endif
