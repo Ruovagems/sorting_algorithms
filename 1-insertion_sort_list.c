@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 
 /**
  * insertion_sort_list - Sorts a DLL of integers in ascending order
@@ -9,10 +8,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
+	listint_t *current = (*list)->next;
+
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	listint_t *current = (*list)->next;
 
 	while (current != NULL)
 	{
@@ -20,7 +20,6 @@ void insertion_sort_list(listint_t **list)
 
 		while (temp->prev != NULL && temp->n < temp->prev->n)
 		{
-
 			if (temp->next != NULL)
 				temp->next->prev = temp->prev;
 
@@ -35,12 +34,9 @@ void insertion_sort_list(listint_t **list)
 
 			temp->next->prev = temp;
 
-
 			temp = temp->prev;
-
 			print_list(*list);
 		}
-
 		current = current->next;
 	}
 }
