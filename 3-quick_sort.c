@@ -1,6 +1,21 @@
 #include "sort.h"
 
 /**
+* swap_ele - swaps elements
+* @x: element to be swapped
+* @y: element to be swapped
+* Return: nothing
+*/
+void swap_ele(int *x, int *y)
+{
+	int temp;
+
+	temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+/**
  * lomuto_partition - creates order of element based on lomuto partition scheme
  * @array: array of integers
  * @size: size of the array
@@ -65,8 +80,6 @@ void lomuto_sort(int *array, size_t size, int left, int right)
  */
 void quick_sort(int *array, size_t size)
 {
-    int part;
-
 	if (!array || size < 2)
 		return;
 
