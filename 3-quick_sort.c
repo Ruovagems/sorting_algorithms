@@ -45,7 +45,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
  */
 void lomuto_sort(int *array, size_t size, int left, int right)
 {
-	int part;
+    int part;
 
 	if (right - left > 0)
 	{
