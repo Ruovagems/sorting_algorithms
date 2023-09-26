@@ -26,22 +26,23 @@ void swap_ele(int *x, int *y)
 */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, count;
+	size_t i, j;
+	int temp;
 
-	if (size < 2 || !array)
+	if (!array || array < 2)
 		return;
 
-	for (count = 0; size - 1 != count;)
+	for (i = size - 1; i > 0; i--)
 	{
-		for (i = 0; i + 1 != size; i++)
+		for (j = 0; j < i; ++j)
 		{
-			if (array[i + 1] < array[i])
+			if (array[j] > array[j + 1])
 			{
-				swap_ele(array + i, array + i + 1);
+				temp = array[j + 1];
+				array[j + 1] = array[j];
+				array[j] = temp;
 				print_array(array, size);
 			}
-			else
-				count++;
 		}
 	}
 }
