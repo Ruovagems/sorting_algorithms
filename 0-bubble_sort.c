@@ -6,13 +6,13 @@
 * @y: element to be swapped
 * Return: nothing
 */
-void swap_ele(*array)
+void swap_ele(int *x, int *y)
 {
-	int temp, i;
+	int temp;
 
-	temp = *array[i];
-	*array[i] = *array[i + 1];
-	*array[i + 1] = temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
 }
 
 
